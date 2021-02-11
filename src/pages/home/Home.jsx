@@ -15,6 +15,7 @@ const Home = () => {
     const artistsName = e.target[0].value;
 
     artistsByName(artistsName).then((artists) => {
+      // save artist name from this fetch so we can use it in a lyric search later?
       setArtists(artists);
       setSearch(artistsName);
     });
