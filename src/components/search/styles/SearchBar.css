@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.SearchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button, input {
+        height: 30px;
+        margin: 5px;
+    }
+
+    button {
+        width: 40px;
+    }
+}

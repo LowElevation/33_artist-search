@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar component renders SearchBar 1`] = `
+<DocumentFragment>
+  <form
+    class="SearchBar"
+  >
+    <input
+      value=""
+    />
+    <button>
+      Go
+    </button>
+  </form>
+</DocumentFragment>
+`;
