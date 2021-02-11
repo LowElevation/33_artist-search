@@ -5,7 +5,10 @@ const albumsByID = (artistID) => {
     `http://musicbrainz.org/ws/2/release?artist=${artistID}&fmt=json`
   )
     .then((res) => res.json())
-    .then((data) => data.releases);
+    .then(albums => albums.map(album => ({
+      albumID: album.id,
+      title: album.title
+    })));
 };
 
 export default albumsByID;

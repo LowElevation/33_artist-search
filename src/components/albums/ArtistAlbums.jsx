@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ArtistAlbums = ({ title, id, date }) => {
+const ArtistAlbums = ({ title, id, albumID }) => {
   return (
     <figure>
       <figcaption>{title}</figcaption>
-      <img src={`http://coverartarchive.org/release/${id}/front`} 
+      <img src={`http://coverartarchive.org/release/${albumID}/front`} 
       />
-      <div>{date}</div>
+      <p>{id}</p>
     </figure>
   
   );
@@ -17,7 +17,7 @@ const ArtistAlbums = ({ title, id, date }) => {
 ArtistAlbums.propTypes = {
   title: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  date: PropTypes.string,
+  albumID: PropTypes.string.isRequired
 };
 
 export default ArtistAlbums;
