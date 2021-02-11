@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchBar from "../../components/search/SearchBar";
 import artistsByName from "../../utils/artistsByName";
-import ArtistSearch from "../search/ArtistSearch";
+import ArtistSearch from "../../components/SearchResults/ArtistSearch";
 
 // https://www.youtube.com/watch?v=WK4HHaNhcgU
 
