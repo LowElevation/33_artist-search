@@ -1,23 +1,31 @@
-import React, { useState, useEffect } from "react";
-import albumsByID from "../../utils/albumsByID";
+import React, { useState } from "react";
+import SearchBar from "../../components/search/SearchBar";
 import artistsByName from "../../utils/artistsByName";
-import lyricsByArtistAndTitle from "../../utils/lyricsByArtistAndTitle";
-import tracklistByAlbumID from "../../utils/tracklistByAlbumID";
+import ArtistSearch from "../search/ArtistSearch";
 
 // https://www.youtube.com/watch?v=WK4HHaNhcgU
+
 const Home = () => {
-  // const [search, useSearch] = useState(null);
+  const [search, setSearch] = useState("");
+  const [artists, setArtists] = useState([]);
 
-  const artistName = "Barbra Streisand";
-  const artistID = "56cd15a1-0d74-438b-8244-c96ffe1cae03";
-  const albumID = "064bcb0c-2eaf-4e4a-a83b-cb53d616dbbd";
-  const songTitle = "Down With Love";
+  const handleSearch = (e) => {
+    e.preventDefault();
 
-  useEffect(() => {
-    return lyricsByArtistAndTitle(artistName, songTitle).then(console.log);
-  }, []);
+    const artistsName = e.target[0].value;
 
-  return <>Home</>;
+    artistsByName(artistsName).then((artists) => {
+      setArtists(artists);
+      setSearch(artistsName);
+    });
+  };
+
+  return (
+    <>
+      <SearchBar search={search} handleSearch={handleSearch} />
+      <ArtistSearch artists={artists} />
+    </>
+  );
 };
 
 export default Home;
