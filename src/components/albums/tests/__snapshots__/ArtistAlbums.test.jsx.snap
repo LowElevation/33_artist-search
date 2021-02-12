@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArtistAlbums component renders ArtistAlbums 1`] = `
+<DocumentFragment>
+  <ul />
+</DocumentFragment>
+`;
