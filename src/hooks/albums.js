@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import albumsByID from "../utils/albumsByID";
 
@@ -16,4 +15,3 @@ export const useAlbums = (albumID) => {
     albums
   };
 };
-

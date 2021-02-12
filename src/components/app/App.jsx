@@ -3,17 +3,18 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AllArtists from "../../pages/allArtists/AllArtists";
 import SearchResults from "../searchResults/SearchResults";
 import AllAlbums from "../../pages/allAlbums/AllAlbums";
+import AllTracks from "../../pages/allTracks/AllTracks";
 
 const App = () => {
   return (
     <>
       <Router>
         <Switch>
-          <Route path="/" exact component={AllArtists} />
-          <Route path="/search" component={SearchResults} />
-          <Route path="/releases/:artistID/" component={AllAlbums}/>
-          <Route path="/releases/tracklist/:albumID" component="" />
-          <Route path="/releases/lyrics/:songID" component="" />
+          <Route exact path="/" component={AllArtists} />
+          <Route exact path="/search" component={SearchResults} />
+          <Route exact path="/releases/:artistID" component={AllAlbums} />
+          <Route exact path="/releases/tracklist/:albumID" component={AllTracks} />
+          <Route exact path="/releases/lyrics/:songID" component="" />
         </Switch>
       </Router>
     </>
