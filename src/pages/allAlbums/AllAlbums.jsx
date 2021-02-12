@@ -6,9 +6,7 @@ import { useAlbums } from "../../hooks/albums";
 const AllAlbums = ({ match }) => {
   const { albums } = useAlbums(match.params.artistID);
 
-  return (
-    <ArtistAlbums albums={albums} />  
-  );
+  return <ArtistAlbums albums={albums} />;
 };
 
 export default AllAlbums;
