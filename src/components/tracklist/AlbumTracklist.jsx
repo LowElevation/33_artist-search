@@ -3,14 +3,12 @@ import PropTypes from "prop-types";
 import uuid from "react-uuid";
 import { Link } from "react-router-dom";
 
-const AlbumTracklist = ({ tracks }) => {
+const AlbumTracklist = ({ tracks, handleClick }) => {
   const tracksList = tracks.map(track => {
     return (
       <li key={uuid()}>
-        <Link to={`/releases/tracklist/${track.trackID}`}>
-          <p key={track.trackID}>
-            {track.title}
-          </p>
+        <Link to={`/releases/tracklist/${track.trackID}`} onClick={handleClick}>
+          {track.title}
         </Link>
 
       </li>
@@ -18,7 +16,7 @@ const AlbumTracklist = ({ tracks }) => {
   });
   return (
     <ul>
-      { tracksList}
+      {tracksList}
     </ul>
   );
 };
@@ -26,7 +24,8 @@ const AlbumTracklist = ({ tracks }) => {
 AlbumTracklist.propTypes = {
   tracks: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired
-  }))
+  })),
+  handleClick: PropTypes.func
 };
 
 export default AlbumTracklist;

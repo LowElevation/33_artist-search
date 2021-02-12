@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import uuid from "react-uuid";
 import { Link } from "react-router-dom";
 
-const SearchResults = ({ artists }) => {
+const SearchResults = ({ artists, handleClick }) => {
   const artistList = artists.map((artist) => {
     return <li key={uuid()}>
-      <Link to={`/releases/${artist.id}`}>
+      <Link to={`/releases/${artist.id}`} onClick={handleClick}>
         {artist.name}
       </Link>
     </li>;
@@ -16,6 +16,7 @@ const SearchResults = ({ artists }) => {
 
 SearchResults.propTypes = {
   artists: PropTypes.array,
+  handleClick: PropTypes.func
 };
 
 export default SearchResults;

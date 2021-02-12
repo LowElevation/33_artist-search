@@ -4,10 +4,10 @@ import AlbumTracklist from "../../components/tracklist/AlbumTracklist";
 import { useTracks } from "../../hooks/tracks";
 
 const AllTracks = ({ match }) => {
-  const { tracks } = useTracks(match.params.albumID);
+  const { tracks, handleClick } = useTracks(match.params.albumID);
 
   return (
-    <AlbumTracklist tracks={tracks} />
+    <AlbumTracklist tracks={tracks} handleClick={handleClick} />
   );
 };
 

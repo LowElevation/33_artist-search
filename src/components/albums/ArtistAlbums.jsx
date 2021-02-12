@@ -19,8 +19,8 @@ const ArtistAlbums = ({ albums }) => {
     );
   });
   return (
-    <ul>
-      { albumsList}
+    <ul> 
+      { albumsList }
     </ul>
   );
 };
