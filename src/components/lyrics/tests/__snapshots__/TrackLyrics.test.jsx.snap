@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrackLyrics component renders TrackLyrics 1`] = `
+<DocumentFragment>
+  <ul>
+    <li />
+  </ul>
+</DocumentFragment>
+`;
