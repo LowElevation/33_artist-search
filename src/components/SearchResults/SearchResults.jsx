@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import uuid from "react-uuid";
 import { Link } from "react-router-dom";
 
-const ArtistSearch = ({ artists }) => {
+const SearchResults = ({ artists }) => {
   const artistList = artists.map((artist) => {
     return <li key={uuid()}>
       <Link to={`/releases/${artist.id}`}>
@@ -14,8 +14,8 @@ const ArtistSearch = ({ artists }) => {
   return <ul>{artistList}</ul>;
 };
 
-ArtistSearch.propTypes = {
+SearchResults.propTypes = {
   artists: PropTypes.array,
 };
 
-export default ArtistSearch;
+export default SearchResults;

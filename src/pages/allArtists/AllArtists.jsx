@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import SearchBar from "../../components/search/SearchBar";
 import artistsByName from "../../utils/artistsByName";
-import ArtistSearch from "../../components/SearchResults/ArtistSearch";
+import SearchResults from "../../components/searchResults/SearchResults";
 
 // https://www.youtube.com/watch?v=WK4HHaNhcgU
 
-const Home = () => {
+const AllArtists = () => {
   const [search, setSearch] = useState("");
   const [artists, setArtists] = useState([]);
 
@@ -24,9 +24,9 @@ const Home = () => {
   return (
     <>
       <SearchBar search={search} handleSearch={handleSearch} />
-      <ArtistSearch artists={artists} />
+      <SearchResults artists={artists} />
     </>
   );
 };
 
-export default Home;
+export default AllArtists;
