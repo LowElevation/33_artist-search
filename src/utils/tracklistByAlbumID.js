@@ -5,8 +5,7 @@ const tracklistByAlbumID = (albumID) => {
     `http://musicbrainz.org/ws/2/recording?release=${albumID}&fmt=json`
   )
     .then((res) => res.json())
-    .then((data) => data.recordings)
-    .then(tracks => tracks.map(track => ({
+    .then(({ recordings }) => recordings.map(track => ({
       trackID: track.id,
       title: track.title
     })));
