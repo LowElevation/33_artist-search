@@ -4,6 +4,7 @@ import AllArtists from "../../pages/allArtists/AllArtists";
 import SearchResults from "../SearchResults/SearchResults";
 import AllAlbums from "../../pages/allAlbums/AllAlbums";
 import AllTracks from "../../pages/allTracks/AllTracks";
+import AllLyrics from "../../pages/allLyrics/allLyrics";
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
             path="/releases/tracklist/:albumID"
             component={AllTracks}
           />
-          <Route exact path="/releases/lyrics/:songID" component="" />
+          <Route exact path="/releases/lyrics/:songID" component={AllLyrics} />
         </Switch>
       </Router>
     </>
