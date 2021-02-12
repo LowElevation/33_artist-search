@@ -13,13 +13,21 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={AllArtists} />
           <Route exact path="/search" component={SearchResults} />
-          <Route exact path="/releases/:artistID" component={AllAlbums} />
           <Route
             exact
-            path="/releases/tracklist/:albumID"
+            path="/releases/:artistName/:artistID"
+            component={AllAlbums}
+          />
+          <Route
+            exact
+            path="/releases/tracklist/:artistName/:albumID"
             component={AllTracks}
           />
-          <Route exact path="/releases/lyrics/:songID" component={AllLyrics} />
+          <Route
+            exact
+            path="/releases/lyrics/:artistName/:title"
+            component={AllLyrics}
+          />
         </Switch>
       </Router>
     </>

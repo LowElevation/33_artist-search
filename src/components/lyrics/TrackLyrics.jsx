@@ -3,20 +3,15 @@ import PropTypes from "prop-types";
 import uuid from "react-uuid";
 
 const TrackLyrics = ({ lyrics }) => {
-  const lyricsResult = lyrics.map(lyric => {
-    return (
-      <div key={uuid()}>
-        <p>{lyric}</p>
-      </div>
-    );
+  const parsedLyrics = lyrics.split("\n").map((line) => {
+    return <li key={uuid()}>{line}</li>;
   });
-  return (
-    <p>{lyricsResult}</p>
-  );
+
+  return <ul>{parsedLyrics}</ul>;
 };
 
 TrackLyrics.propTypes = {
-  lyrics: PropTypes.string.isRequired
+  lyrics: PropTypes.string.isRequired,
 };
 
 export default TrackLyrics;

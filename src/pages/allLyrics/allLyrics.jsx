@@ -4,11 +4,12 @@ import TrackLyrics from "../../components/lyrics/TrackLyrics";
 import { useLyrics } from "../../hooks/lyrics";
 
 const AllLyrics = ({ match }) => {
-  const { lyrics } = useLyrics(match.params.albumID);
+  const artist = match.params.artistName;
+  const title = match.params.title;
 
-  return (
-    <TrackLyrics lyrics={lyrics} />
-  );
+  const { lyrics } = useLyrics(artist, title);
+
+  return <TrackLyrics lyrics={lyrics} />;
 };
 
 export default AllLyrics;
