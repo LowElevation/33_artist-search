@@ -1,25 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ArtistAlbums = ({ title, id, albumID }) => {
+const ArtistAlbums = ({ albums }) => {
+  const albumsList = albums.map(album => {
+    return (
+      <figure key={album.albumID}>
+        <figcaption>{album.title}</figcaption>
+        <img style={{ width: "150px" }} src={album.image} alt="cover art" />
+      </figure>
+    );
+  }); 
   return (
-    <figure>
-      <figcaption>{title}</figcaption>
-      <img src={`http://coverartarchive.org/release/${albumID}/front`} 
-      />
-      <p>{id}</p>
-    </figure>
-  
+    <div>
+      { albumsList }
+    </div>
   );
-
 };
 
 ArtistAlbums.propTypes = {
-  title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  albumID: PropTypes.string.isRequired
+  albums: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    albumID: PropTypes.string.isRequired 
+  }
+  ))
 };
 
 export default ArtistAlbums;
 
-// onError="this.src = 'https://fakealbumcovers.com/images/FakeAlbums/yungvinci_selfportrait.jpg'" 
+//  

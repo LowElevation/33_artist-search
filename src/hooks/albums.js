@@ -2,11 +2,11 @@
 import { useState, useEffect } from "react";
 import albumsByID from "../utils/albumsByID";
 
-export const useAlbums = () => {
+export const useAlbums = (albumID) => {
   const [albums, setAlbum] = useState([]);
 
   useEffect(() => {
-    albumsByID()
+    albumsByID(albumID)
       .then(albums => {
         setAlbum(albums);
       });
