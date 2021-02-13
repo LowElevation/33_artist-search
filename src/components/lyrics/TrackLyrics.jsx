@@ -7,7 +7,7 @@ const TrackLyrics = ({ lyrics }) => {
     return <li key={uuid()}>{line}</li>;
   });
 
-  return <ul>{parsedLyrics}</ul>;
+  return <ul data-testid="TrackLyrics">{parsedLyrics}</ul>;
 };
 
 TrackLyrics.propTypes = {
