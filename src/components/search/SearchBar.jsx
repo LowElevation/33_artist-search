@@ -4,7 +4,7 @@ import styles from "./styles/SearchBar.css";
 
 const SearchBar = ({ search, handleSearch }) => {
   return (
-    <form className={styles.SearchBar} onSubmit={handleSearch}>
+    <form data-testid="Go" className={styles.SearchBar} onSubmit={handleSearch}>
       <input defaultValue={search} />
       <button>Go</button>
     </form>
