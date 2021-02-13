@@ -2,7 +2,9 @@
 
 exports[`TrackLyrics component renders TrackLyrics 1`] = `
 <DocumentFragment>
-  <ul>
+  <ul
+    data-testid="TrackLyrics"
+  >
     <li />
   </ul>
 </DocumentFragment>
