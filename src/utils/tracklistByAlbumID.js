@@ -2,7 +2,7 @@
 
 const tracklistByAlbumID = (albumID) => {
   return fetch(
-    `http://musicbrainz.org/ws/2/recording?release=${albumID}&fmt=json`
+    `https://musicbrainz.org/ws/2/recording?release=${albumID}&fmt=json`
   )
     .then((res) => res.json())
     .then(({ recordings }) => recordings.map(track => ({

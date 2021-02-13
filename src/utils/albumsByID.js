@@ -2,14 +2,14 @@
 
 const albumsByID = (artistID) => {
   return fetch(
-    `http://musicbrainz.org/ws/2/release?artist=${artistID}&fmt=json`
+    `https://musicbrainz.org/ws/2/release?artist=${artistID}&fmt=json`
   )
     .then((res) => res.json())
     .then((data) => data.releases)
     .then(albums => albums.map(album => ({
       albumID: album.id,
       title: album.title,
-      image: album["cover-art-archive"].front ? `http://coverartarchive.org/release/${album.id}/front` : "https://fakealbumcovers.com/images/FakeAlbums/yungvinci_selfportrait.jpg"
+      image: album["cover-art-archive"].front ? `https://coverartarchive.org/release/${album.id}/front` : "https://fakealbumcovers.com/images/FakeAlbums/yungvinci_selfportrait.jpg"
     })));
 };
 
