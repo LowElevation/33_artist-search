@@ -11,9 +11,9 @@ const SearchResults = ({ artists }) => {
       </li>
     );
   });
-  return <ul>{artistList}</ul>;
+  return <ul >{artistList}</ul>;
 };
-
+// data-testid="Go"Go
 SearchResults.propTypes = {
   artists: PropTypes.array,
 };
