@@ -16,7 +16,7 @@ const ArtistAlbums = ({ albums, artistName }) => {
       </li>
     );
   });
-  return <ul>{albumsList}</ul>;
+  return <ul data-testid="albums">{albumsList}</ul>;
 };
 
 ArtistAlbums.propTypes = {
