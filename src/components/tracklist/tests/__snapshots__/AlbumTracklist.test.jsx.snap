@@ -2,6 +2,8 @@
 
 exports[`AlbumTracklist component renders AlbumTracklist 1`] = `
 <DocumentFragment>
-  <ul />
+  <ul
+    data-testid="tracklist"
+  />
 </DocumentFragment>
 `;
