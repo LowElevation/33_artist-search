@@ -9,9 +9,10 @@ describe("Container AllTracks", () => {
   it("displays all tracks for a single album", () => {
     render(
       <MemoryRouter>
-        <AllTracks match={{ params: { albumId: "4b112d60-2bb2-4533-8f3a-e3c7977e813c" } }} />
+        <AllTracks match={{ params: { albumID: "198a3a11-2acd-3605-b80f-8b3fef67b1e0", artistName: "britney spears" } }} />
       </MemoryRouter>);
     const ul = screen.getByTestId("tracklist");
+    
     return waitFor(() => {
       expect(ul).not.toBeEmptyDOMElement();
     });
