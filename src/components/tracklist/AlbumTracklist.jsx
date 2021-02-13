@@ -13,7 +13,7 @@ const AlbumTracklist = ({ tracks, artistName }) => {
       </li>
     );
   });
-  return <ul>{tracksList}</ul>;
+  return <ul data-testid="tracklist">{tracksList}</ul>;
 };
 
 AlbumTracklist.propTypes = {
