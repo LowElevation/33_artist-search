@@ -4,6 +4,7 @@ exports[`SearchBar component renders SearchBar 1`] = `
 <DocumentFragment>
   <form
     class="SearchBar"
+    data-testid="Go"
   >
     <input
       value=""

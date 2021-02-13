@@ -2,6 +2,8 @@
 
 exports[`SearchResults component renders SearchResults 1`] = `
 <DocumentFragment>
-  <ul />
+  <ul>
+    Go
+  </ul>
 </DocumentFragment>
 `;
